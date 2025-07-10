@@ -35,6 +35,7 @@ class LoginService implements LoginServiceInterface
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return [
+            'message' => 'Login Successful',
             'access_token' => $token,
             'token_type' => 'Bearer',
         ];
